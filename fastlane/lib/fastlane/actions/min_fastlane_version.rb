@@ -17,6 +17,8 @@ module Fastlane
           UI.user_error!(error_message)
         end
 
+        UI.message("This is indeed a forked version :D")
+
         UI.message("Your fastlane version #{Fastlane::VERSION} matches the minimum requirement of #{defined_version}  ✅")
       end
 
