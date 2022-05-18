@@ -178,6 +178,10 @@ module Spaceship
       end
 
       def handle_response(response)
+        puts "====== logs ======"
+        puts response.body
+        puts "====== logs ======"
+
         if (200...300).cover?(response.status) && (response.body.nil? || response.body.empty?)
           return
         end
