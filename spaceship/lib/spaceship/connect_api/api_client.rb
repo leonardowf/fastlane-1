@@ -143,6 +143,13 @@ module Spaceship
             req.params = params if params
             req.body = body.to_json if body
             req.headers['Content-Type'] = 'application/json' if body
+
+            puts "==== delete on api client ===="
+            puts red.body
+            puts red.headers
+            puts req.url
+            puts red.params
+            puts "==== delete on api client ====="
           end
         end
         handle_response(response)

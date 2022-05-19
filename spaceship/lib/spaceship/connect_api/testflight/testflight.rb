@@ -116,6 +116,9 @@ module Spaceship
         end
 
         def delete_beta_app_review_submission(beta_app_review_submission_id: nil)
+          puts "====delete_beta_app_review_submission===="
+          puts beta_app_review_submission_id
+          puts "====delete_beta_app_review_submission===="
           params = test_flight_request_client.build_params(filter: nil, includes: nil, limit: nil, sort: nil, cursor: nil)
           test_flight_request_client.delete("betaAppReviewSubmissions/#{beta_app_review_submission_id}", params)
         end
